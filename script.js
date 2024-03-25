@@ -1,1 +1,1 @@
-alert("welcome to the hackathon webpage!")
+//alert("welcome to the hackathon webpage!")
