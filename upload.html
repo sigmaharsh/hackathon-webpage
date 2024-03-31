@@ -7,6 +7,14 @@
 </head>
 <body>
   <input type="file" id="fileInput">
-  <script src="upload.js"></script>
+  <script>
+    document.getElementById('fileInput').addEventListener('change', function() {
+    var file = this.files[0];
+    if (file) {
+      alert('Selected file: ' + file.name);
+    }
+  });
+  
+  </script>
 </body>
 </html>
