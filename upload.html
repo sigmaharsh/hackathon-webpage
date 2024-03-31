@@ -1,75 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>File Upload</title>
-<style>
-  body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload File</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-h2 {
-  margin-top: 0;
-  font-size: 28px;
-  text-align: center;
-  color: #333;
-}
+    h2 {
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    input[type="file"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-input[type="file"] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #f1f3f5;
-  border: none;
-  border-radius: 8px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
+    button, .go-back {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none; /* added for anchor tag */
+    }
 
-input[type="submit"] {
-  width: 50%;
-  padding: 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+    button:hover, .go-back:hover {
+      background-color: #0056b3;
+    }
 
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-
-</style>
+    .go-back {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+    }
+  </style>
 </head>
 <body>
-  <h2>Upload a File</h2>
-  <ul>
-    <li><a href="index.html">Go back</a></li>
-  </ul>
-  <form action="upload.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload File" name="submit">
-  </form>
+  <a href="index.html" class="go-back">Go Back</a>
+  <div class="container">
+    <h2>Upload a File</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" id="file">
+      <button type="submit">Upload</button>
+    </form>
+  </div>
 </body>
 </html>
